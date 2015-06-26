@@ -1,5 +1,6 @@
 {
   "name": "screensizes.io",
+  "version": "0.0.1",
   "repository": "git@github.com:rupl/screensizes.git",
   "license": "MIT",
   "private": true,
@@ -14,5 +15,12 @@
     "gulp-sass": "^2.0.2",
     "gulp-util": "^3.0.6",
     "socket.io": "^1.3.5"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "scripts": {
+    "postinstall": "gulp sass",
+    "start": "node index.js"
   }
 }
