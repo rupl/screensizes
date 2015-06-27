@@ -8,8 +8,6 @@ var c = u.colors;
 var nodemon = require('gulp-nodemon');
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
-var bs = require('browser-sync');
-var reload = bs.reload;
 
 // -----------------------------------------------------------------------------
 // Sass Task
@@ -17,7 +15,6 @@ var reload = bs.reload;
 // Compiles Sass and runs the CSS through autoprefixer.
 // -----------------------------------------------------------------------------
 gulp.task('sass', function() {
-  bs.notify('<span style="color: grey">Running:</span> Sass task');
   return gulp.src('sass/**/*')
     .pipe(sass({
         outputStyle: 'nested',
@@ -25,12 +22,10 @@ gulp.task('sass', function() {
       .on('error', function(err, res) {
         gutil.log(c.red('sass'), 'failed to compile');
         gutil.log(c.red('> ') + err.message);
-        bs.notify('<span style="color: red">Sass failed to compile</span>');
       })
     )
     .pipe(prefix('last 2 versions', '> 1%'))
-    .pipe(gulp.dest('public/css'))
-    .pipe(reload({stream:true}));
+    .pipe(gulp.dest('public/css'));
 });
 
 // -----------------------------------------------------------------------------
