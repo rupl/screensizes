@@ -4,7 +4,8 @@
   box-sizing: border-box; }
 
 body {
-  background: #fff; }
+  background: #fff;
+  overflow: hidden; }
 
 #canvas {
   width: 100vw;
