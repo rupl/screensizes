@@ -25,6 +25,7 @@ body {
   transform-origin: 0 0;
 
   animation: grow 10s ease-in-out 1;
+  animation-delay: 5s;
 }
 
 @keyframes grow {
@@ -35,6 +36,32 @@ body {
   100% {
     opacity: 0;
     transform: scale(1) translate3d(-50%, -50%, 0);
+  }
+}
+
+#welcome {
+  font-family: monospace;
+  font-size: 1.4em;
+  font-weight: 700;
+
+  width: 80%;
+  max-width: 380px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  opacity: 1;
+  animation: welcome 6s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes welcome {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

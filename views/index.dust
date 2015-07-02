@@ -9,8 +9,9 @@
     <link rel="stylesheet" media="all" href="/css/style.css">
   </head>
   <body>
+    <div id="welcome">Watch this page a while.<br><br> You're seeing the screen sizes of all visitors in real-time as they arrive.</div>
     <div id="canvas"></div>
-    <p class="credit">an experiment by <a href="http://chrisruppel.com">rupl</a></p>
+    <p class="credit"><a href="https://github.com/rupl/screensizes">an experiment</a> by <a href="http://chrisruppel.com">rupl</a></p>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/client.js"></script>
