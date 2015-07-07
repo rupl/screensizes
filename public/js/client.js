@@ -2,11 +2,6 @@
 
 var $ = function (selector) { return document.querySelector(selector); }
 var socket = io();
-var reqAnimationFrame = (function () {
-  return window['requestAnimationFrame'] || function (callback) {
-    window.setTimeout(callback, 1000 / 60);
-  };
-})();
 
 /**
  * Add a new screen on all clients. It doesn't immediately add a shape to your
