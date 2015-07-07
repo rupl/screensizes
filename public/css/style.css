@@ -78,7 +78,7 @@ body {
   100% {
     opacity: 0; } }
 
-.credit {
+.colophon {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -88,5 +88,5 @@ body {
   font-size: 16px;
   background: rgba(0, 0, 0, 0.25);
   opacity: .8; }
-  .credit a {
+  .colophon a {
     color: #070; }
