@@ -31,3 +31,19 @@ socket.on('add', function(props) {
   // Add the new element
   $('#canvas').appendChild(el);
 });
+
+/**
+ * More info.
+ */
+$('.huh').addEventListener('click', function(event) {
+  $('#more-info').classList.toggle('showing');
+});
+
+/**
+ * Allow keyboard toggle of more-info too using Shift+?
+ */
+document.addEventListener('keyup', function(event) {
+  if(event.shiftKey && event.keyCode == 191) {
+    $('#more-info').classList.toggle('showing');
+  }
+});

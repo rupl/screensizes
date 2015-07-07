@@ -4,10 +4,30 @@
   box-sizing: border-box;
 }
 
+.element-invisible {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); // IE6, IE7
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 body {
   background: #fff;
   overflow: hidden;
+
+  font-family: monospace;
+  font-size: 1.4em;
+  font-weight: 700;
 }
+
+p {
+  margin-bottom: 1em;
+}
+
+//
+// screens
+//
 
 #canvas {
   width: 100vw;
@@ -39,11 +59,11 @@ body {
   }
 }
 
-#welcome {
-  font-family: monospace;
-  font-size: 1.4em;
-  font-weight: 700;
+//
+// intro / explanation
+//
 
+#welcome {
   width: 80%;
   max-width: 380px;
   position: absolute;
@@ -65,19 +85,62 @@ body {
   }
 }
 
+#more-info {
+  // position
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 50;
+
+  // styles
+  max-width: 416px;
+  padding: 1em;
+  background: rgba(#fff, .5);
+  opacity: 0; // invisible by default
+  transition: opacity .4s ease-in-out;
+
+  // toggles visibility
+  &.showing {
+    opacity: 1;
+  }
+}
+
+//
+// corner buttons
+//
+
+.huh,
 .colophon {
   position: absolute;
   bottom: 0;
   right: 0;
 
+  margin: 0;
   padding: 2px 8px;
   color: #000;
-  font-family: sans-serif;
   font-size: 16px;
   background: rgba(0, 0, 0, .25);
+  border-radius: 5px 0 0 0;
   opacity: .8;
 
   a {
     color: #070;
+  }
+}
+
+.huh {
+  // position
+  right: auto;
+  left: 0;
+
+  // styles
+  border-radius: 0 5px 0 0;
+  border: 0;
+
+  // ? icon
+  &::after {
+    content: '?';
+    cursor: help;
   }
 }

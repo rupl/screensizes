@@ -3,9 +3,23 @@
   padding: 0;
   box-sizing: border-box; }
 
+.element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px); }
+
 body {
   background: #fff;
-  overflow: hidden; }
+  overflow: hidden;
+  font-family: monospace;
+  font-size: 1.4em;
+  font-weight: 700; }
+
+p {
+  margin-bottom: 1em; }
 
 #canvas {
   width: 100vw;
@@ -49,9 +63,6 @@ body {
             transform: scale(1) translate3d(-50%, -50%, 0); } }
 
 #welcome {
-  font-family: monospace;
-  font-size: 1.4em;
-  font-weight: 700;
   width: 80%;
   max-width: 380px;
   position: absolute;
@@ -78,15 +89,43 @@ body {
   100% {
     opacity: 0; } }
 
+#more-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  z-index: 50;
+  max-width: 416px;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+          transition: opacity 0.4s ease-in-out; }
+  #more-info.showing {
+    opacity: 1; }
+
+.huh,
 .colophon {
   position: absolute;
   bottom: 0;
   right: 0;
+  margin: 0;
   padding: 2px 8px;
   color: #000;
-  font-family: sans-serif;
   font-size: 16px;
   background: rgba(0, 0, 0, 0.25);
+  border-radius: 5px 0 0 0;
   opacity: .8; }
+  .huh a,
   .colophon a {
     color: #070; }
+
+.huh {
+  right: auto;
+  left: 0;
+  border-radius: 0 5px 0 0;
+  border: 0; }
+  .huh::after {
+    content: '?';
+    cursor: help; }
