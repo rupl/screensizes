@@ -42,6 +42,7 @@ app.get('/screen', function(req, res){
 
   // Broadcast
   io.emit('add', props);
+  console.log('ADD', props);
   res.sendStatus(200);
 });
 
