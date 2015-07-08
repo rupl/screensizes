@@ -23,7 +23,8 @@ app.use(express.static(__dirname + '/public', {redirect: false}));
  */
 app.get('/', function(req, res){
   cons.dust('views/index.dust', {
-    GA: GA
+    GA: GA,
+    VISUALIZE_SELF: VISUALIZE_SELF
   }, function (err, out) {
     if (err) {console.error(err); }
     res.send(out);
