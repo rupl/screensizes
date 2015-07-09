@@ -37,11 +37,39 @@
          * Add a new screen on all clients. It doesn't immediately add a shape
          * to your DOM, the 'add' listener in client.js handles that part.
          */
-        window.onload = function() {
+        window.onload = broadcast;
+
+        /**
+         * Broadcast on resize too. It's purty.
+         */
+        window.onresize = debounce(broadcast, 50);
+
+        /**
+         * Broadcast
+         */
+        function broadcast() {
           socket.emit('add', {
             w: window.innerWidth,
             h: window.innerHeight
           });
+        }
+
+        /**
+         * Debounce (from underscore.js)
+         */
+        function debounce(func, wait, immediate) {
+          var timeout;
+          return function() {
+            var context = this, args = arguments;
+            var later = function() {
+              timeout = null;
+              if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+          };
         };
       </script>
     {/VISUALIZE_SELF}

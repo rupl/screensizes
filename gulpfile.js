@@ -41,7 +41,7 @@ gulp.task('watch', function() {
 gulp.task('start', ['sass', 'watch'], function () {
   nodemon({
     script: 'index.js',
-    ext: 'js html',
+    ext: 'js html dust',
     env: { 'NODE_ENV': 'development' }
   });
 });
