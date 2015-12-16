@@ -22,7 +22,7 @@
     <div id="canvas"></div>
 
     <button class="huh"><span class="element-invisible">what is this site about?</span></button>
-    <p class="colophon"><a href="https://github.com/rupl/screensizes">an experiment</a> by <a href="http://chrisruppel.com">rupl</a></p>
+    <p class="colophon"><a href="https://github.com/rupl/screensizes">an experiment</a> by <a href="https://chrisruppel.com">rupl</a></p>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/client.js"></script>
