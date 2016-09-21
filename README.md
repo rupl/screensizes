@@ -1,8 +1,8 @@
 # Screensizes
 
-[Check it out on the live site!](http://screensizes.org) It displays visitors' screen sizes in real-time.
+[Check it out on the live site!](https://screensizes.org) It displays visitors' screen sizes in real-time.
 
-Inspired by the visualization on Brad Frost's [This Is Responsive](http://bradfrost.github.io/this-is-responsive/).
+Inspired by the visualization on Brad Frost's [This Is Responsive](https://bradfrost.github.io/this-is-responsive/).
 
 ## Use this on your own site
 
@@ -21,4 +21,4 @@ You can measure these on the client-side by checking `window.innerWidth` and `wi
 
 ![image](https://cloud.githubusercontent.com/assets/39191/8488716/9ec0e90e-20c9-11e5-85e3-a1cc586a9cdc.png)
 
-Made with :revolving_hearts: by [Chris Ruppel](http://chrisruppel.com).
+Made with :revolving_hearts: by [Chris Ruppel](https://chrisruppel.com).
