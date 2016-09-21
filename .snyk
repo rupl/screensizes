@@ -1,0 +1,18 @@
+version: v1.5.2
+ignore:
+  'npm:cli:20160615':
+    - dustjs-linkedin > cli:
+        reason: snyk
+        expires: '2016-10-21T16:53:27.568Z'
+patch:
+  'npm:negotiator:20160616':
+    - socket.io > engine.io > accepts > negotiator:
+        patched: '2016-09-21T16:52:41.257Z'
+  'npm:tough-cookie:20160722':
+    - dustjs-linkedin > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-09-21T16:52:41.257Z'
+  'npm:ws:20160624':
+    - socket.io > socket.io-client > engine.io-client > ws:
+        patched: '2016-09-21T16:52:41.257Z'
+    - socket.io > engine.io > ws:
+        patched: '2016-09-21T16:52:41.257Z'

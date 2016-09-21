@@ -8,6 +8,7 @@
     "consolidate": "^0.13.1",
     "dustjs-linkedin": "^2.7.2",
     "express": "^4.13.0",
+    "snyk": "^1.19.1",
     "socket.io": "^1.4.5"
   },
   "devDependencies": {
@@ -22,6 +23,10 @@
     "npm": "3.10.x"
   },
   "scripts": {
-    "start": "node index.js"
-  }
+    "start": "node index.js",
+    "test": "snyk test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
