@@ -42,7 +42,7 @@ app.get('/screen', function(req, res){
 
   // Broadcast
   io.emit('add', props);
-  console.log('ADD', props);
+  console.log('🔷➕ ', JSON.stringify(props));
   res.sendStatus(200);
 });
 
@@ -51,7 +51,7 @@ app.get('/screen', function(req, res){
  * Someone connected.
  */
 io.on('connection', function(socket){
-  console.log('user: connected');
+  // console.log('👥➕');
 
   /**
    * A new screen appears!
@@ -59,15 +59,14 @@ io.on('connection', function(socket){
   socket.on('add', function(props){
     props = makeUnique(props);
     io.emit('add', props);
-    console.log('ADD', props);
+    console.log('🔷 ', JSON.stringify(props));
   });
 
   /**
    * Someone got bored.
    */
   socket.on('disconnect', function(){
-    console.log('user: disconnected');
-    io.emit('status', 'someone left');
+    // console.log('👥💨 ');
   });
 });
 
@@ -75,7 +74,7 @@ io.on('connection', function(socket){
  * Listen for users to connect
  */
 http.listen(port, function(){
-  console.log('Listening on port ' + port);
+  console.log('⚡  Listening on port ' + port);
 });
 
 /**
