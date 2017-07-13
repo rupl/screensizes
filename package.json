@@ -19,8 +19,8 @@
     "gulp-util": "^3.0.6"
   },
   "engines": {
-    "node": "6.3.x",
-    "npm": "3.10.x"
+    "node": "6.11.1",
+    "npm": "3.10.10"
   },
   "scripts": {
     "start": "node index.js",
