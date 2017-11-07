@@ -1,6 +1,6 @@
 {
   "name": "screensizes",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "repository": "git@github.com:rupl/screensizes.git",
   "license": "MIT",
   "private": true,
@@ -19,8 +19,8 @@
     "gulp-util": "^3.0.6"
   },
   "engines": {
-    "node": "6.11.1",
-    "npm": "3.10.10"
+    "node": "8.9.0",
+    "npm": "5.5.1"
   },
   "scripts": {
     "start": "node index.js",
