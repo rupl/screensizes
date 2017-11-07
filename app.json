@@ -1,0 +1,17 @@
+{
+  "name": "screensizes",
+  "description": "Visualizes other visitors' screen sizes in real-time.",
+  "keywords": [
+    "analytics",
+    "websockets",
+    "real-time"
+  ],
+  "website": "https://screensizes.org",
+  "repository": "https://github.com/rupl/screensizes",
+  "success_url": "/",
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    }
+  ]
+}
