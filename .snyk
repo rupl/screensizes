@@ -1,9 +1,16 @@
-version: v1.5.2
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:cli:20160615':
     - dustjs-linkedin > cli:
         reason: snyk
         expires: '2016-10-21T16:53:27.568Z'
+  'npm:parsejson:20170908':
+    - socket.io > socket.io-client > engine.io-client > parsejson:
+        reason: None given
+        expires: '2017-12-07T13:59:24.352Z'
+# patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:negotiator:20160616':
     - socket.io > engine.io > accepts > negotiator:
@@ -16,3 +23,14 @@ patch:
         patched: '2016-09-21T16:52:41.257Z'
     - socket.io > engine.io > ws:
         patched: '2016-09-21T16:52:41.257Z'
+  'npm:debug:20170905':
+    - dustjs-linkedin > chokidar > fsevents > node-pre-gyp > tar-pack > debug:
+        patched: '2017-11-07T13:59:04.515Z'
+    - socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2017-11-07T13:59:04.515Z'
+  'npm:ms:20170412':
+    - socket.io > socket.io-adapter > socket.io-parser > debug > ms:
+        patched: '2017-11-07T13:59:04.515Z'
+  'npm:tough-cookie:20170905':
+    - dustjs-linkedin > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2017-11-07T13:59:04.515Z'

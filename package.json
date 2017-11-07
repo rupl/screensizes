@@ -9,7 +9,7 @@
     "dustjs-linkedin": "^2.7.2",
     "express": "^4.13.0",
     "snyk": "^1.19.1",
-    "socket.io": "^1.4.5"
+    "socket.io": "^2.0.2"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
