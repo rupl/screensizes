@@ -99,8 +99,7 @@ p {
   padding: 1em;
   background: rgba(255, 255, 255, 0.5);
   opacity: 0;
-  -webkit-transition: opacity .4s ease-in-out;
-          transition: opacity .4s ease-in-out; }
+  transition: opacity .4s ease-in-out; }
   #more-info.showing {
     opacity: 1; }
 

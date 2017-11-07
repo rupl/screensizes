@@ -9,6 +9,10 @@ var nodemon = require('gulp-nodemon');
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 
+// Log some debug info
+log(c.yellow('Environment:', (process.env.NODE_ENV || 'local')));
+log(c.yellow('Visualize Self:', (process.env.VISUALIZE_SELF || 'false')));
+
 // -----------------------------------------------------------------------------
 // Sass Task
 //
@@ -20,8 +24,8 @@ gulp.task('sass', function() {
         outputStyle: 'nested',
       })
       .on('error', function(err, res) {
-        gutil.log(c.red('sass'), 'failed to compile');
-        gutil.log(c.red('> ') + err.message);
+        log(c.red('sass'), 'failed to compile');
+        log(c.red('> ') + err.message);
       })
     )
     .pipe(prefix('last 2 versions', '> 1%'))
