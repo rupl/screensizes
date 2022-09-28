@@ -3,6 +3,3 @@
 
 # ignore package managers
 node_modules
-
-# ignore generated assets
-# css

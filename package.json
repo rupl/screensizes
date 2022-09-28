@@ -6,28 +6,19 @@
   "private": true,
   "dependencies": {
     "consolidate": "^0.13.1",
-    "dustjs-linkedin": "^2.7.2",
+    "dustjs-linkedin": "^3.0.1",
     "express": "^4.13.0",
-    "snyk": "^1.19.1",
-    "socket.io": "^2.0.2"
+    "socket.io": "^4"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-nodemon": "^2.0.3",
-    "gulp-sass": "^5.1.0",
-    "gulp-util": "^3.0.6",
-    "sass": "^1.55.0"
+    "gulp-nodemon": "^2.5.0"
   },
   "engines": {
     "node": "18.x",
     "npm": "8.x"
   },
   "scripts": {
-    "start": "node index.js",
-    "test": "snyk test",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
-  },
-  "snyk": true
+    "start": "node index.js"
+  }
 }
