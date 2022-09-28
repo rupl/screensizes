@@ -74,6 +74,7 @@ io.on('connection', function(socket){
  * Listen for users to connect
  */
 http.listen(port, function(){
+  console.log('🔩 VISUALIZE_SELF:', process.env.VISUALIZE_SELF);
   console.log('⚡  Listening on port ' + port);
 });
 
