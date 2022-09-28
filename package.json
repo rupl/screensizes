@@ -6,13 +6,13 @@
   "private": true,
   "dependencies": {
     "consolidate": "^0.13.1",
+    "dustjs-linkedin": "^3.0.1",
     "express": "^4.13.0",
-    "socket.io": "^2.0.2"
+    "socket.io": "^4"
   },
   "devDependencies": {
-    "dustjs-linkedin": "^3.0.1",
     "gulp": "^4.0.2",
-    "gulp-nodemon": "^2.0.3"
+    "gulp-nodemon": "^2.5.0"
   },
   "engines": {
     "node": "18.x",
