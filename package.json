@@ -1,6 +1,6 @@
 {
   "name": "screensizes",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": "git@github.com:rupl/screensizes.git",
   "license": "MIT",
   "private": true,
@@ -12,15 +12,16 @@
     "socket.io": "^2.0.2"
   },
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-nodemon": "^2.0.3",
-    "gulp-sass": "^2.3.2",
-    "gulp-util": "^3.0.6"
+    "gulp-sass": "^5.1.0",
+    "gulp-util": "^3.0.6",
+    "sass": "^1.55.0"
   },
   "engines": {
-    "node": "8.9.0",
-    "npm": "5.5.1"
+    "node": "18.x",
+    "npm": "8.x"
   },
   "scripts": {
     "start": "node index.js",
